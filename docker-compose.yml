@@ -1,6 +1,7 @@
 version: "3"
 services:
-  shopwep-backend:
+  app:
+    image: shopweb_backend:dev
     build: .
     ports:
       - "8081:8080"
