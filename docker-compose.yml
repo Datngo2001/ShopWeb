@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: shopweb_backend:dev
+    build: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./target/Shop-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/ROOT.war/
+    # restart: unless-stopped
