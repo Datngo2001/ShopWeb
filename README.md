@@ -10,6 +10,6 @@ lastname VARCHAR(30) NOT NULL,
 email VARCHAR(50)
 )
 --------------------------------------------------------------------------
-CREATE USER '*********'@'localhost' IDENTIFIED BY '******************';
-GRANT select,update,delete ON Shop.student TO 'ShopApp'@'localhost';
+CREATE USER 'name_user'@'localhost' IDENTIFIED BY 'your_password'; 
+GRANT select,update,delete ON Shop.student TO 'name_user'@'localhost'; 
 FLUSH PRIVILEGES;
