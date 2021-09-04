@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" errorPage="error.jsp"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="demoTag" uri="WEB-INF/tlds/helloTag.tld" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:import url="header.jsp"></c:import>
-	<h1>Hello world</h1>
-
+	<h1>Hi im navbar. I come from header.jsp</h1>
+	<demoTag:HelloTab/>
 </body>
 </html>
