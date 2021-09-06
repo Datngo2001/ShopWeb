@@ -6,8 +6,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css\header.css">
 </head>
 <body>
+	<h1>hello world</h1>
 	<h1>Hi im navbar. I come from header.jsp</h1>
 	<demoTag:HelloTab/>
 </body>
