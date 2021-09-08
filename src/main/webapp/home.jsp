@@ -15,6 +15,10 @@
 </head>
 <body>
 	<c:import url="sharedView\header.jsp"></c:import>
+	<%
+		String username = session.getAttribute("username").toString();
+		out.print(username);
+	%>
 	<div class="home">
     <div class="container">
       <div class="product">
