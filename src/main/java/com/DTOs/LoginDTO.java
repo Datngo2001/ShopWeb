@@ -1,6 +1,6 @@
-package com.model.account;
+package com.DTOs;
 
-public class LoginModel {
+public class LoginDTO {
 	String username;
 	String password;
 	

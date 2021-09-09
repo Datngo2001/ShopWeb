@@ -9,11 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="login" method="POST">
+	<form action="register" method="POST">
 		Username: <input type="text" name="username"><br>
 		Password: <input type="password" name="password"><br>
-		<span style="color:red"><c:out value="${loginMessage}"/></span>
-		<input type="submit" value="login">
+		Re-Enter: <input type="password" name="reEnter"><br>
+		<span style="color:red"><c:out value="${registerMessage}"/></span>		
+		<input type="submit" value="register">
 	</form>
 </body>
 </html>

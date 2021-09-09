@@ -32,8 +32,8 @@ public class AddServlet extends HttpServlet {
 		
 		//res.sendRedirect("square?c=" + c);	
 		
-		HttpSession session = req.getSession();
-		session.setAttribute("c", c);
-		res.sendRedirect("square");
+//		HttpSession session = req.getSession();
+//		session.setAttribute("c", c);
+//		res.sendRedirect("square");
 	}
 }
