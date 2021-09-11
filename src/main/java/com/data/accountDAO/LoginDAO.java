@@ -12,6 +12,7 @@ import javax.crypto.spec.SecretKeySpec;
 import com.DTOs.LoginDTO;
 import com.data.Database;
 import com.model.User;
+import com.services.HashService;
 
 public class LoginDAO {
 	
@@ -23,26 +24,26 @@ public class LoginDAO {
 	}
 	
 	public boolean login(LoginDTO loginDTO){
+		User userFromDatabase = null;
+		
 		try {
-			User user = loadHashAndSalt(loginDTO.getUsername());
-			if(user == null) {
-				return false;
-			}
-			
-			// compute hash from the input password
-			SecretKeySpec secretKeySpec = new SecretKeySpec(user.getPasswordSalt(), "HmacSHA512");
-			Mac mac = Mac.getInstance("HmacSHA512");
-			mac.init(secretKeySpec);
-			byte[] hashResult = mac.doFinal(loginDTO.getPassword().getBytes());
-			
-			// compare hash result with the hash from database
-			return Arrays.equals(hashResult, user.getPasswordHash());
-			
-		} catch (SQLException | InvalidKeyException | NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
+			userFromDatabase = loadHashAndSalt(loginDTO.getUsername());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
 		}
+		
+		if(userFromDatabase == null) {
+			return false;
+		}
+		
+		//compute hash
+		HashService hashService = new HashService();
+		byte[] hashedInputPass = hashService.doHash(
+				loginDTO.getPassword().getBytes(), userFromDatabase.getPasswordSalt());
+		
+		// compare hash result with the hash from database
+		return Arrays.equals(hashedInputPass, userFromDatabase.getPasswordHash());
 	}
 	
 

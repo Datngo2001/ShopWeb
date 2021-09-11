@@ -1,11 +1,8 @@
 package com.controller.account;
 
 import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,7 +48,7 @@ public class register extends HttpServlet {
 				// dispatch to register.jsp with a message
 				SendErrorForRegisterPage(request, response, "Register server error");
 			}					
-		} catch (ClassNotFoundException | SQLException | IOException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
