@@ -13,6 +13,8 @@ import com.DTOs.RegisterDTO;
 import com.data.Database;
 
 public class RegisterDAO {
+	String hashAlgorithm = "HmacSHA512";
+	int saltLength = 18;
 	Connection con;
 	String registerQuery = "Insert into Shop.user (username, password_hash, password_salt) Values (?, ?, ?);";
 	String checkUsernameQuery = "Select username From Shop.user Where username = ? ;";
@@ -23,13 +25,13 @@ public class RegisterDAO {
 	
 	public boolean register(RegisterDTO registerDTO) throws SQLException{
 		
-		byte[] salt = generateSalt();;
+		byte[] salt = generateSalt();
 		byte[] hash = null;
 		
 		try {
 			// do hashing
-			SecretKeySpec secretKeySpec = new SecretKeySpec(salt, "HmacSHA512");
-			Mac mac = Mac.getInstance("HmacSHA512");
+			SecretKeySpec secretKeySpec = new SecretKeySpec(salt, hashAlgorithm);
+			Mac mac = Mac.getInstance(hashAlgorithm);
 			mac.init(secretKeySpec);
 			hash = mac.doFinal(registerDTO.getPassword().getBytes());
 		} catch (InvalidKeyException e) {
@@ -73,7 +75,7 @@ public class RegisterDAO {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();
         Random rnd = new Random();
-        while (salt.length() < 18) { // length of the random string.
+        while (salt.length() < saltLength) { // length of the random string.
             int index = (int) (rnd.nextFloat() * SALTCHARS.length());
             salt.append(SALTCHARS.charAt(index));
         }

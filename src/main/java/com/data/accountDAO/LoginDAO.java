@@ -46,7 +46,7 @@ public class LoginDAO {
 	}
 	
 
-	// load password hash and salt
+	// load password hash and salt by the username from database
 	protected User loadHashAndSalt (String username) throws SQLException{
 		var st = con.prepareStatement(loadUserQuery);
 		st.setString(1, username);
