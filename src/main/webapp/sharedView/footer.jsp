@@ -4,9 +4,10 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
+		  <link rel="stylesheet" href="css/footer.css">
 	</head>
 	<body>
-		  <footer class="footer">
+   <footer class="footer">
     <div class="container-footer">
       <div class="row-header">
         <div class="footer-col">
