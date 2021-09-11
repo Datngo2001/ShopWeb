@@ -26,13 +26,12 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 	charset="utf-8"></script>
-
+	
+<!--JQuery animation -->
+<script type="text/javascript" src="js/jQuery"></script>
 
 <!-- lightslider.css animation ----->
 <link rel="stylesheet" href="css/lightslider.css">
-
-<!--JQuery animation -->
-<script type="text/javascript" src="js/jQuery"></script>
 
 <!-- -->
 <script type="text/javascript" src="js/lightslider.js"></script>

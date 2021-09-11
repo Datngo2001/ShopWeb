@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -16,10 +17,9 @@
 		<button type="button" name="button" class="btn btn-primary">Search</button>
 		<div class="navigation">
 			<ul class="menu">
-				<div class="close-btn"></div>
 				<li class="menu-item"><a href="#">Home</a></li>
 				<li class="menu-item"><a class="sub-btn" href="#">Laptop</a></li>
-				<li class="menu-item"><a class="sub-btn" href="#">Accessories<i
+				<li class="menu-item"><a class="sub-btn" href="#">Accessories <i
 						class="fas fa-angle-down"></i></a>
 					<ul class="sub-menu">
 						<li class="sub-item"><a href="#">Sub Item 01</a></li>
