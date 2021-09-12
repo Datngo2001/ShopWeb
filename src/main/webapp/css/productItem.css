@@ -75,14 +75,65 @@
 .recommendList {
   background-color: #1e90ff;
   border-radius: 3px;
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-  padding: 0 20px 20px;
+  padding: 0 20px 60px;
+  position: relative;
+  width: 364px;
+  height: 461px;
 }
 .recommendItem {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   margin-top: 20px;
+  position: absolute;
+  padding: 0 50px;
+}
+#active {
+  display: flex;
+}
+.nextBtn,
+.prevBtn {
+  position: absolute;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+  color: #fff;
+}
+.nextBtn:active,
+.prevBtn:hover {
+  color: #000;
+}
+.nextBtn {
+  bottom: 50%;
+  right: 12.5px;
+}
+.prevBtn {
+  bottom: 50%;
+  left: 12.5px;
+}
+.indicatorWrapper {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 35%;
+  flex-direction: row;
+}
+.indicator {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.indicator:last-child {
+  margin-right: 0;
+}
+#selected {
+  background-color: #000;
 }
 .recommendItem > .productItemPrice {
   margin-top: 10px;
