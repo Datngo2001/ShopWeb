@@ -7,14 +7,32 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/register.css">
 </head>
 <body>
-	<form action="register" method="POST">
-		Username: <input type="text" name="username"><br>
-		Password: <input type="password" name="password"><br>
-		Re-Enter: <input type="password" name="reEnter"><br>
-		<span style="color:red"><c:out value="${registerMessage}"/></span>		
-		<input type="submit" value="register">
-	</form>
+	<div class="container d-flex justify-content-center align-content-center">
+		<form action="register" class="" method="POST">
+			<h2 class="">Signin</h2>
+			<div class="mb-3">
+				<label for="usernameInput" class="form-label">Username</label> <input
+					id="usernameInput" type="text" class="form-control" name="username">
+			</div>
+			<div class="mb-3">
+				<label for="passwordInput" class="form-label">Password</label> <input
+					id="passwordInput" type="password" class="form-control"
+					name="password">
+			</div>
+			<div class="mb-3">
+				<label for="passwordRepeat" class="form-label">Repeat password</label> <input
+					id="passwordRepeat" type="password" class="form-control"
+					name="reEnter">
+			</div>
+			<span style="color: red"><c:out value="${registerMessage}" /></span>
+			<button type="submit" class="btn btn-primary">Signin</button>
+		</form>
+	</div>
 </body>
 </html>

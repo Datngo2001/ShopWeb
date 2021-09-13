@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="css/header.css">
 
 </head>
-<body>
+<body>	
 	<c:import url="sharedView\header.jsp"></c:import>
 	<main class="productItemContainer">
 		<div class="sectionWrapper">
