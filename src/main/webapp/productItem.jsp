@@ -248,5 +248,6 @@
 		</div>
 	</main>
 	<c:import url="sharedView\footer.jsp"></c:import>
+	<script src="./js/productItem.js"></script>
 </body>
 </html>
