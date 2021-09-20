@@ -171,131 +171,34 @@
 			</div>
 			<div class="row-card">
 				<!-- Card -->
-				<div class="col-md-3">
-					<div class="card mt-3">
-						<div class="product-1 align-items-center p-2 text-center">
-							<img src="assets/img/product7.jpg" class="rounded" alt=""
-								width="150px">
-							<h5>Laptop</h5>
-							<div class="mt-3 info">
-								<span class="text1 d-block">i7</span> <span class="text1">
-									Ram 8G</span>
-							</div>
-							<div class="cost mt-4 text-dark">
-								<span>Price</span>
-								<div class="star mt-3 align-items-center">
-									<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star-half"></i>
+				<c:forEach var="tempProduct" items="${list_product}">
+					<div class="col-md-3">
+						<div class="card mt-3">
+							<div class="product-1 align-items-center p-2 text-center">
+								<img src="assets/img/product7.jpg" class="rounded" alt=""
+									width="150px">
+								<h5>${tempProduct.name}</h5>
+								<div class="mt-3 info">
+									<span class="text1 d-block">i7</span> <span class="text1">${tempProduct.description}</span>
+								</div>
+								<div class="cost mt-4 text-dark">
+									<span>${tempProduct.price}</span>
+									<div class="star mt-3 align-items-center">
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i> 
+										<i class="fas fa-star-half"></i>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!--Button for card -->
-						<div class="p-3 laptop text-center text-white">
-							<span class="text-uppercase"> Add to cart </span>
+							<!--Button for card -->
+							<div class="p-3 laptop text-center text-white">
+								<span class="text-uppercase"> Add to cart </span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card mt-3">
-						<div class="product-1 align-items-center p-2 text-center">
-							<img src="assets/img/product5.jpg" class="rounded" alt=""
-								width="150px">
-							<h5>Laptop</h5>
-							<div class="mt-3 info">
-								<span class="text1 d-block">i7</span> <span class="text1">
-									Ram 8G</span>
-							</div>
-							<div class="cost mt-4 text-dark">
-								<span>Price</span>
-								<div class="star mt-3 align-items-center">
-									<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star-half"></i>
-								</div>
-							</div>
-						</div>
-						<!--Button for card -->
-						<div class="p-3 laptop text-center text-white">
-							<span class="text-uppercase"> Add to cart </span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card mt-3">
-						<div class="product-1 align-items-center p-2 text-center">
-							<img src="assets/img/product3.jpg" class="rounded" alt=""
-								width="150px">
-							<h5>Laptop</h5>
-							<div class="mt-3 info">
-								<span class="text1 d-block">i7</span> <span class="text1">
-									Ram 8G</span>
-							</div>
-							<div class="cost mt-4 text-dark">
-								<span>Price</span>
-								<div class="star mt-3 align-items-center">
-									<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star-half"></i>
-								</div>
-							</div>
-						</div>
-						<!--Button for card -->
-						<div class="p-3 laptop text-center text-white">
-							<span class="text-uppercase"> Add to cart </span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card mt-3">
-						<div class="product-1 align-items-center p-2 text-center">
-							<img src="assets/img/product1.jpg" class="rounded" alt=""
-								width="150px">
-							<h5>Laptop</h5>
-							<div class="mt-3 info">
-								<span class="text1 d-block">i7</span> <span class="text1">
-									Ram 8G</span>
-							</div>
-							<div class="cost mt-4 text-dark">
-								<span>Price</span>
-								<div class="star mt-3 align-items-center">
-									<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star-half"></i>
-								</div>
-							</div>
-						</div>
-						<!--Button for card -->
-						<div class="p-3 laptop text-center text-white">
-							<span class="text-uppercase"> Add to cart </span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card mt-3">
-						<div class="product-1 align-items-center p-2 text-center">
-							<img src="assets/img/product3.jpg" class="rounded" alt=""
-								width="150px">
-							<h5>Laptop</h5>
-							<div class="mt-3 info">
-								<span class="text1 d-block">i7</span> <span class="text1">
-									Ram 8G</span>
-							</div>
-							<div class="cost mt-4 text-dark">
-								<span>Price</span>
-								<div class="star mt-3 align-items-center">
-									<i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-										class="fas fa-star-half"></i>
-								</div>
-							</div>
-						</div>
-						<!--Button for card -->
-						<div class="p-3 laptop text-center text-white">
-							<span class="text-uppercase"> Add to cart </span>
-						</div>
-					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
 	</section>
