@@ -4,18 +4,22 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
 
 import com.DTOs.LoginDTO;
 import com.data.accountDAO.LoginDAO;
 
 @WebServlet("/login")
 public class login extends HttpServlet {
+	@Resource(name="jdbc/shop")
+    private DataSource dataSource;	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

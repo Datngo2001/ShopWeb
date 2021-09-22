@@ -12,22 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-import com.helperClass.ProductDbUtil;
+import com.data.ProductDAO;
 import com.model.Product;
 
 @WebServlet("/ProductControllerServlet")
 public class ProductControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private ProductDbUtil productDb;
-    @Resource(name="jdbc/shop")
-    private DataSource dataSource;
-    
+    private ProductDAO productDAO;
     
     @Override
 	public void init() throws ServletException {
 		super.init();
 		try {
-			productDb = new ProductDbUtil(dataSource);
+			productDAO = new ProductDAO();
 		}
 		catch(Exception ex) {
 			throw new ServletException(ex);
@@ -46,7 +43,7 @@ public class ProductControllerServlet extends HttpServlet {
 		}
 	}
 	private void listProduct(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		List<Product> product = productDb.getProducts();
+		List<Product> product = productDAO.getProducts();
 		request.setAttribute("list_product", product);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");

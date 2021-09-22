@@ -3,13 +3,38 @@ package com.data;
 import java.sql.*;
 //import com.mysql.jdbc.Driver;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 public class Database {
-	private String url = "jdbc:mysql://localhost:3306/shop";
-	private String username = "ShopApp";
-	private String password = "2021ShopApp2021";
+
 	public Connection getConnection() throws SQLException, ClassNotFoundException {
-		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection(url,username,password);
-		return con;
+		try {
+			InitialContext ic = new InitialContext();
+			Context xmlContext = (Context) ic.lookup("java:comp/env");
+			DataSource datasource = (DataSource) xmlContext.lookup("jdbc/shop");
+			Connection con = datasource.getConnection();
+			return con;
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public void closeConnection(Connection myCon, Statement mySta, ResultSet myRes) {
+		try {
+			if(myCon != null) 
+				myCon.close();
+			if(mySta != null)
+				mySta.close();
+			if(myRes != null)
+				myRes.close();
+		}
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 }

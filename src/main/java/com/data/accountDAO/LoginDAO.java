@@ -3,7 +3,9 @@ package com.data.accountDAO;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Arrays;
 
 import javax.crypto.Mac;
@@ -15,6 +17,8 @@ import com.model.User;
 import com.services.HashService;
 
 public class LoginDAO {
+
+	private Database db;
 	
 	Connection con;
 	String loadUserQuery = "SELECT username, password_hash, password_salt FROM shop.user where username=?;";
@@ -24,6 +28,7 @@ public class LoginDAO {
 	}
 	
 	public boolean login(LoginDTO loginDTO){
+		
 		User userFromDatabase = null;
 		
 		try {
