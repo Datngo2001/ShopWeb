@@ -103,6 +103,7 @@ img.download-img {
     animation: headerGrow ease-in 0.3s;
     display: none;
     cursor: pointer;
+    z-index: 100;
 }
 @keyframes headerGrow{
     from {
@@ -209,8 +210,9 @@ h1.logo-title {
     border-radius: 2px;
     border: 1px solid #D6EAF8;
     box-shadow: 0 1px 20px #D6EAF8;
-    margin: 0 16px;
+    margin: 0 15px;
     display: none;
+    z-index: 100;
 }
 .form-control-p:focus ~ .product-history {
     display: block;
@@ -243,7 +245,7 @@ a.history-link {
     outline: none;
     padding: 0 10px;
     font-weight: 300; 
-    margin: 0 0 0 35px;
+    
 }
 .btn-p {
     min-width: 50px;

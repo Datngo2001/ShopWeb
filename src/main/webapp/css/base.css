@@ -88,43 +88,4 @@ html {
   background-color: #3498DB;
   color: #fff;
 }
-.select-input {
-  height: 34px;
-  min-width: 180px;
-  border-radius: 2px;
-  background-color: var(--white-color);
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  margin: 0 5px;
-  position: relative;
-  
-}
-.select-price-icon {
-  font-size: 14px;
-  color: rgb(131, 131, 131);
-  position: relative;
-  margin-left: 100px;
-}
-.select-input-list {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 20px;
-  border-radius: 2px;
-  background-color: var(--white-color);
-  list-style: none;
-  padding: 8px 16px;
-}
-.select-input-link {
-  font-size: 14px;
-  display: block;
-  margin: 5px 0;
-}
-.select-input:hover .select-input-list  {
-  display: block;
-}
-.select-input-link a:hover {
-  color: #FAD7A0;
-}
+
