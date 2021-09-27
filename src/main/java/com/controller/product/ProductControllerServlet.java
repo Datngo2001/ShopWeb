@@ -37,10 +37,34 @@ public class ProductControllerServlet extends HttpServlet {
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
+			String theCommand = request.getParameter("command");
+			if(theCommand == null)
+				theCommand = "LIST";
+			switch(theCommand) {
+				case "LIST":
+					listProduct(request, response);
+					break;
+				case "ADD":
+					addStudent(request, response);
+					break;
+				default:
+					listProduct(request, response);
+				
+			}
 			listProduct(request, response);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	private void addStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String name = request.getParameter("name");
+		String description = request.getParameter("description");
+		int price = Integer.parseInt(request.getParameter("price"));
+		Product theProduct = new Product(name, description, price);
+		productDAO.addProduct(theProduct);
+		listProduct(request, response);
+			
 	}
 	private void listProduct(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<Product> product = productDAO.getProducts();
