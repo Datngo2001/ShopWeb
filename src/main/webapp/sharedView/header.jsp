@@ -5,41 +5,130 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-	<header class="header">
-		<a href="#" class="logo">logo</a> <input type="text" name="search"
-			placeholder="Searching..." class="form-control">
-		<button type="button" name="button" class="btn btn-primary">Search</button>
-		<div class="navigation">
-			<ul class="menu">
-				<li class="menu-item"><a href="#">Home</a></li>
-				<li class="menu-item"><a class="sub-btn" href="#">Laptop</a></li>
-				<li class="menu-item"><a class="sub-btn" href="#">Accessories <i
-						class="fas fa-angle-down"></i></a>
-					<ul class="sub-menu">
-						<li class="sub-item"><a href="#">Sub Item 01</a></li>
-						<li class="sub-item"><a href="#">Sub Item 02</a></li>
-						<li class="sub-item"><a href="#">Sub Item 03</a></li>
-						<li class="sub-item"><a href="#">Sub Item 04</a></li>
-						<li class="sub-item more"><a class="more-btn" href="#">More
-								Items <i class="fas fa-angle-right"></i>
-						</a>
-							<ul class="more-menu">
-								<li class="more-item"><a href="#">More Item 01</a></li>
-								<li class="more-item"><a href="#">More Item 02</a></li>
-							</ul></li>
-					</ul></li>
-				<li class="menu-item"><a href="#">Services</a></li>
-				<li class="menu-item"><a href="#">Login</a></li>
-			</ul>
-		</div>
-		<div class="menu-btn"></div>
-	</header>
+	    <header class="header">
+	    
+        <div class="grid">
+          <nav class="navbar">
+            <ul class="navbar_list">
+              <li class="navbar-item navbar-has-qr navbar-separate">
+                Wellcome to electronic store
+                <!--Header QR-->
+                <div class="navbar-qr">
+                    <img src="./assets/img/QrCode.png" alt="" class="navbar-qr-img">
+                    <div class="navbar-qr-apps">
+                      <a href="" class="navbar_qr-link">
+                        <img src="./assets/img/CHplay.png" alt="google play" class="download-img">
+                      </a>
+                      <a href="" class="navbar_qr-link">
+                        <img src="./assets/img/Phone.png" alt="google play" class="download-img">
+                      </a>
+                    </div>
+                </div>
+              </li>
+              <li class="navbar-item">|</li>
+              <li class="navbar-item">
+                Connection
+                <i class="navbar_list-icon fab fa-facebook"> </i>
+                <i class="navbar_list-icon fab fa-github"></i>
+              </li>
+            </ul>
+            <ul class="navbar_list">
+              <li class="navbar-item navbar-has-notify">
+                <i class="navbar_list-icon fas fa-bell"></i>
+                Notifications
+                <div class="navbar-notify">
+                  <header class="header-notify">
+                    <h3> New notification </h3>
+                    	
+                  </header>
+                  <ul class="navbar-notify-list">
+                    <li class="navbar-notify-item">
+                      <a href="" class="notify-link">
+                        <img src="https://cdn.tgdd.vn/Products/Images/44/239538/acer-aspire-7-a715-41g-r150-r7-nhq8ssv004-200x200.jpg" class="notify-img">
+                        <div class="notify-body">
+                            <span class="notify-name">Product</span>
+                            <span class="notify-description">User Thien Nguyen oder bold laptop HP 11065h</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="navbar-notify-item">
+                      <a href="" class="notify-link">
+                        <img src="https://cdn.tgdd.vn/Products/Images/44/239538/acer-aspire-7-a715-41g-r150-r7-nhq8ssv004-200x200.jpg" class="notify-img">
+                        <div class="notify-body">
+                            <span class="notify-name">Product</span>
+                            <span class="notify-description">User Thien Nguyen oder bold laptop HP 11065h</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="navbar-notify-item">
+                      <a href="" class="notify-link">
+                        <img src="https://cdn.tgdd.vn/Products/Images/44/239538/acer-aspire-7-a715-41g-r150-r7-nhq8ssv004-200x200.jpg" class="notify-img">
+                        <div class="notify-body">
+                            <span class="notify-name">Product</span>
+                            <span class="notify-description">User Thien Nguyen oder bold laptop HP 11065h</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <footer class="footer-notify">
+                    <a href="" class="footer-notify-btn">See All</a>
+                  </footer>
+                </div>
+              </li>
+              <li class="navbar-item">
+                 <a href="" class="navbar-item-link"><i class="navbar_list-icon fas fa-question-circle"></i> Help?</a>
+              </li>
+              <li class="navbar-item">Sign up</li>
+              <li class="navbar-item">|</li>
+              <li class="navbar-item">Log in</li>
+            </ul>
+          </nav>
+          <div class="navbar-search">
+            <div class="navbar-logo">
+              <h1 class="logo-title"> <span>LOGO</span></h1>
+            </div>
+            <div class="search-product">
+              <input class="form-control-p" type="text" placeholder="Searching anything here...">
+              <button class="btn-p btn-primary" > <i class="fas fa-search"></i> </button>
+              <div class="product-history">
+                <h4 class="history-heading">History Search</h4>
+                <ul class="history-list">
+                  <li class="history-item">
+                    <a href="" class="history-link">Iphone 13</a>
+                  </li>
+                  <li class="history-item">
+                    <a href="" class="history-link">Acer Gaming</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cart-product">
+                <i class="cart-product-icon fas fa-shopping-cart"></i>
+            </div>
+            <div class="product-header">
+              <ul class="product-list">
+                <li class="header-product-item">
+                  <a href="" class="product-link">Product</a>
+                </li>
+                <li class="header-product-item">
+                  <a href="" class="product-link">Contact</a>
+                </li>
+                <li class="header-product-item">
+                  <a href="" class="product-link link-active">Newest</a>
+                </li>
+              </ul>
+            </div>
+           
+          </div>    
+        </div>
+
+      </header>
 	<script src="js/header.js"></script>
 </body>
 </html>

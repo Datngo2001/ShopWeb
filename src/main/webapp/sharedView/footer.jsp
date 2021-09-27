@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/footer.css">
 
 </head>
