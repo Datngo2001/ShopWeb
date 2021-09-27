@@ -11,15 +11,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <title>Electronic Shop</title>
 
 </head>
 <body>
 	<c:import url="sharedView\header.jsp"></c:import>
-	<br> <br> <br> <br>
+	
 	<div class="app_container">
       <div class="grid">
         <div class="grid_row app-content">
@@ -118,6 +118,7 @@
         </div>
       </div>
     </div>
+    <br> <br>
 	<c:import url="sharedView\footer.jsp"></c:import>
 </body>
 </html>

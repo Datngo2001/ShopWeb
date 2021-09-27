@@ -64,7 +64,7 @@ public class ProductControllerServlet extends HttpServlet {
 		Product theProduct = new Product(name, description, price);
 		productDAO.addProduct(theProduct);
 		listProduct(request, response);
-		
+			
 	}
 	private void listProduct(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<Product> product = productDAO.getProducts();
