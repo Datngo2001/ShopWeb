@@ -43,7 +43,7 @@
 						</li>
 						<input type="text" name="" value="" class="form-control-contact"
 							placeholder="Contact us">
-						<button type="button" name="button" class="btn btn-secondary">Submit</button>
+
 					</ul>
 				</div>
 			</div>
