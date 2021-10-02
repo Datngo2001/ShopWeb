@@ -1,38 +1,46 @@
 package com.controller.account;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.Arrays;
 
-import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.sql.DataSource;
 
 import com.DTOs.LoginDTO;
 import com.data.accountDAO.LoginDAO;
+import com.services.HashService;
 
 @WebServlet("/login")
 public class login extends HttpServlet {
-	@Resource(name="jdbc/shop")
-    private DataSource dataSource;	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		LoginDTO loginModel = new LoginDTO();
-		loginModel.setUsername(request.getParameter("username"));
-		loginModel.setPassword(request.getParameter("password"));
+		LoginDTO loginDTO = new LoginDTO();
+		loginDTO.setUsername(request.getParameter("username"));
+		loginDTO.setPassword(request.getParameter("password"));
 
 		try {
 			var loginDAO = new LoginDAO();
-			if (loginDAO.login(loginModel)) {
+			
+			var user = loginDAO.loadHashAndSalt(loginDTO.getUsername());
+				
+			//compute hash
+			HashService hashService = new HashService();
+			byte[] hashedInputPass = hashService.doHash(
+					loginDTO.getPassword().getBytes(), user.getPasswordSalt());
+				
+			// compare hash result with the hash from database
+		    boolean matched = Arrays.equals(hashedInputPass, user.getPasswordHash());			
+			
+			if (matched) {
 				HttpSession session = request.getSession();
-				session.setAttribute("username", loginModel.getUsername());
+				session.setAttribute("username", loginDTO.getUsername());
 				response.sendRedirect("home.jsp");
 			} else {
 				request.setAttribute("loginMessage", "Password or username incorrect");

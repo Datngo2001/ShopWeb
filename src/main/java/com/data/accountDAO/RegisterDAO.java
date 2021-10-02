@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.DTOs.RegisterDTO;
 import com.data.Database;
+import com.model.User;
 import com.services.HashService;
 
 public class RegisterDAO {
@@ -17,20 +18,12 @@ public class RegisterDAO {
 		con = new Database().getConnection();
 	}
 	
-	public boolean register(RegisterDTO registerDTO) throws SQLException{
-		
-		HashService hashService = new HashService();
-		
-		byte[] salt = hashService.generateSalt();
-		byte[] hash = null;
-		
-		//compute hash
-		hash = hashService.doHash(registerDTO.getPassword().getBytes(), salt);
+	public boolean register(User newUser) throws SQLException{
 		
 		var st = con.prepareStatement(registerQuery);
-		st.setString(1, registerDTO.getUsername());
-		st.setBytes(2, hash);
-		st.setBytes(3, salt);
+		st.setString(1, newUser.getUsername());
+		st.setBytes(2, newUser.getPasswordHash());
+		st.setBytes(3, newUser.getPasswordSalt());
 		var rs = st.executeUpdate();
 		if(rs > 0) {
 			// Success
