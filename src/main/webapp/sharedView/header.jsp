@@ -12,7 +12,6 @@
 </head>
 <body>
 	    <header class="header">
-	    
         <div class="grid">
           <nav class="navbar">
             <ul class="navbar_list">
@@ -111,20 +110,23 @@
             <div class="cart-product">
                 <i class="cart-product-icon fas fa-shopping-cart"></i>
             </div>
+            <form action="ProductControllerServlet" method="get">
             <div class="product-header">
               <ul class="product-list">
                 <li class="header-product-item">
-                  <a href="" class="product-link">Product</a>
+                  <a href="" class="product-link">
+                  	<input type="submit" name="command" value="Product">
+                  </a>
                 </li>
+                
                 <li class="header-product-item">
-                  <a href="" class="product-link">Contact</a>
-                </li>
-                <li class="header-product-item">
-                  <a href="" class="product-link link-active">Newest</a>
+                  <a href="" class="product-link">
+                  	<input type="submit" name="command" value="Employee">
+                  </a>
                 </li>
               </ul>
             </div>
-           
+           	</form>
           </div>    
         </div>
 

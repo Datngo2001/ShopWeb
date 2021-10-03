@@ -64,7 +64,7 @@
             </nav>
           </div>
           <div class="grid_column-10">
-
+			
             <div class="home-filter">
               <span class="home-label">Sorting by</span>
               <button class="btn-product home-filter-btn">Popular</button>
@@ -103,6 +103,9 @@
                 <div class="grid_column-2-5">
                   <div class="product-item">
                     <div class="product-item-img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/44/236962/acer-aspire-7-a715-75g-52s5-i5-nhq85sv002-600x600.jpg);"></div>
+                    <form action="Controller">
+                    	<input type="hidden" ${product.id}>
+                    </form>
                     <h4 class="product-item-name">${product.description}</h4>
                     <div class="product-item-price">
                       <span class="price-old"> ${product.price}d</span>

@@ -19,7 +19,7 @@ import com.model.Product;
 public class ProductControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ProductDAO productDAO;
-    
+    private String status;
     @Override
 	public void init() throws ServletException {
 		super.init();
@@ -52,9 +52,9 @@ public class ProductControllerServlet extends HttpServlet {
 					break;
 				case "UPDATE":
 					updateProduct(request, response);
+					break;
 				default:
 					listProduct(request, response);
-				
 			}
 			listProduct(request, response);
 			
@@ -66,7 +66,7 @@ public class ProductControllerServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String description = request.getParameter("description");
 		int price = Integer.parseInt(request.getParameter("price"));
-		Product theProduct = new Product(description, description, price);
+		Product theProduct = new Product(name, description, price);
 		productDAO.updateProduct(theProduct);
 		listProduct(request, response);
 		
@@ -89,7 +89,21 @@ public class ProductControllerServlet extends HttpServlet {
 	private void listProduct(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		List<Product> product = productDAO.getProducts();
 		request.setAttribute("list_product", product);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+		String theCommand = request.getParameter("command");
+		
+		if(theCommand == null)
+			theCommand = "LIST";
+		switch(theCommand) {
+			case "Product":
+				status = "home-management-product.jsp";
+				break;
+			case "Employee":
+				status = "home-management-employee.jsp";
+				break;
+			default:
+				status = "home.jsp";
+		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher(status);
 		dispatcher.forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -3,7 +3,7 @@
 <%@page import="com.model.*, java.util.*"%>
 <%@page import="com.model.Product, java.util.*"%>
 <%@page import="com.data.ProductDAO, com.controller.product.ProductControllerServlet"%>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,78 +15,122 @@
   <link rel="stylesheet" href="./css/home.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.2.0/js/dataTables.fixedHeader.min.js"></script>
 <title>Add Product</title>
 </head>
 <body>
 	<c:import url="sharedView\header.jsp"></c:import>
 	  <div class="app-container app-content">
         <div class="grid">
-          <div class="grid_row ">
-            <div class="grid_column-3">
-				<div class="product-left-side">
-	                <h3 class="title-add-product">Add new product</h3>
-	                <div class="add-main-content">
-	                	<form action="ProductControllerServlet" method="get">
-		                	<input type="hidden" name="command" value="ADD"/>
-		                  <div class="add-form-group">
-		                    <input type="text" class="input-control" name="name" placeholder="Name product">
-		                  </div>
-		                  <div class="add-form-group">
-		                    <input type="text" class="input-control" name="description" placeholder="Description">
-		                  </div>
-		                  <div class="add-form-group">
-		                    <input type="text" class="input-control" name="price" placeholder="Price">
-		                  </div>
-			              <div class="add-form-group">
-							<button type="submit" class="btn btn-primary" name="save">Submit</button>
-			              </div>
-	                	</form>
-	                </div>
-	            </div>
-            </div>
-            <div class="grid_column-9">
-              <div class="product-right-side">
-                <h3 class="title-right-side">Product List</h3>
-                <input type="text" id="myInput" onkeyup="filterProduct()" placeholder="Search for names.." title="Type in a name">
-                <table id="table-product">
-                  <thead>
-                    <tr class="header-list">
-                      <th id="name">Name</th>
-                      <th id="des">Discription</th>
-                      <th>Amount</th>
-                      <th>Price</th>
-                      <th>Picture</th>
-                      <th>Brand</th>
-                      <th>Active</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-					<c:forEach var="tempProduct" items="${list_product}">
-						<c:url var="tempLink" value="ProductControllerServlet">
-							<c:param name="command" value="LOAD"/>
-							<c:param name="productId" value="${tempProduct.id}"/>			
-						</c:url>
-						<tr class="body-list">
-	                      <td>${tempProduct.name}</td>
-	                      <td>${tempProduct.description}</td>
-	                      <td>12</td>
-	                      <td>${tempProduct.price}</td>
-	                      <td> <img src="" alt=""></td>
-	                      <td>Korea</td>
-	                      <td> <a href="${tempLink}"> ${tempProduct.id}</a> </td>
-	                    </tr>
+		  <div class="grid_row">
+			<div class="grid_column-2">
+			  <p> Add, Update, Remove,.. here</p>
+			</div>
+			<div class="grid_column-10">
+			  <table id="example" class="display table-product" style="width:100%">
+		        <thead>
+		            <tr>
+		                <th>Name</th>
+		                <th>Description</th>
+		                <th>Picture</th>
+		                <th>Amount</th>
+		                <th>Release Day</th>
+		                <th>Price</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+					<c:forEach var="product" items="${list_product}">
+						<tr style="font-weight: 300; color: grey;"> 
+							<th>${product.name}</th>
+			                <th>${product.description}</th>
+			                <th> <img style="width: 50px; height: 50px;" src="assets/img/p11.jpg"></th>
+			                <th></th>
+			                <th></th>
+			                <th>${product.price}</th>
+						</tr>
 					</c:forEach>
-                  </tbody>
-                </table>
-                <p> <a href="ProductControllerServlet">Return the homepage</a> </p>
-              </div>
-            </div>
-          </div>
+		        </tbody>
+		        <tfoot>
+		            <tr>
+						<th>Name</th>
+		                <th>Description</th>
+		                <th>Picture</th>
+		                <th>Amount</th>
+		                <th>Release Day</th>
+		                <th>Price</th>
+		            </tr>
+		        </tfoot>
+		    </table>
+			</div>
+		  </div>
         </div>
       </div>
 
       <c:import url="sharedView\footer.jsp"></c:import>
-            <script>
+      	    <script type="text/javascript">
+      $(document).ready(function () {
+    // Setup - add a text input to each footer cell
+    $('#example thead tr')
+        .clone(true)
+        .addClass('filters')
+        .appendTo('#example thead');
+
+    var table = $('#example').DataTable({
+        orderCellsTop: true,
+        fixedHeader: true,
+        initComplete: function () {
+            var api = this.api();
+
+            // For each column
+            api
+                .columns()
+                .eq(0)
+                .each(function (colIdx) {
+                    // Set the header cell to contain the input element
+                    var cell = $('.filters th').eq(
+                        $(api.column(colIdx).header()).index()
+                    );
+                    var title = $(cell).text();
+                    $(cell).html('<input type="text" placeholder="' + title + '" />');
+
+                    // On every keypress in this input
+                    $(
+                        'input',
+                        $('.filters th').eq($(api.column(colIdx).header()).index())
+                    )
+                        .off('keyup change')
+                        .on('keyup change', function (e) {
+                            e.stopPropagation();
+
+                            // Get the search value
+                            $(this).attr('title', $(this).val());
+                            var regexr = '({search})'; //$(this).parents('th').find('select').val();
+
+                            var cursorPosition = this.selectionStart;
+                            // Search the column for that value
+                            api
+                                .column(colIdx)
+                                .search(
+                                    this.value != ''
+                                        ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                        : '',
+                                    this.value != '',
+                                    this.value == ''
+                                )
+                                .draw();
+
+                            $(this)
+                                .focus()[0]
+                                .setSelectionRange(cursorPosition, cursorPosition);
+                        });
+                });
+        },
+    });
+});
+    </script>
+        <script>
         function filterProduct() {
           var input, filter, table, tr, td;
           input = document.getElementById("myInput");
@@ -116,5 +160,7 @@
           }
         }
       </script>
+</body>
+</html>
 </body>
 </html>
