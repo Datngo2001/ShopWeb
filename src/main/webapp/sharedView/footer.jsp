@@ -1,14 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="./css/footer.css">
 
-</head>
-<body>
 	<footer class="footer">
 		<div class="container-footer">
 			<div class="row-header">
@@ -43,11 +33,9 @@
 						</li>
 						<input type="text" name="" value="" class="form-control-contact"
 							placeholder="Contact us">
-						<button type="button" name="button" class="btn btn-secondary">Submit</button>
+
 					</ul>
 				</div>
 			</div>
 		</div>
 	</footer>
-</body>
-</html>

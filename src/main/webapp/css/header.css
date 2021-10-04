@@ -3,18 +3,19 @@
 * {
     text-decoration: none;
 }
-.header {
+.header-side .header {
     width: 100%;
     height: 120px; 
     background-image: linear-gradient(0, #fdfefe, #149bf5);
 }
-h1.navbar-logo {
+.header-side h1.navbar-logo {
     margin-bottom: 0;
     overflow: hidden;
 }
-.navbar {
+.header-side .navbar-header {
     display: flex;
     justify-content: space-between;
+    height: 40px;
 }
 .navbar_list {
     list-style: none;
@@ -22,7 +23,7 @@ h1.navbar-logo {
     margin-top: 5px;
 }
 
-.navbar-item, .navbar-item-link {
+.header-side .navbar-item, .navbar-item-link {
     display: inline-block;
     justify-content: space-between;
     color: var(--white-color);
@@ -31,22 +32,22 @@ h1.navbar-logo {
     font-weight: 300;
     position: relative;
 }
-.navbar-item:hover, .navbar-item-link:hover {
+.header-side .navbar-item:hover, .navbar-item-link:hover {
     color: #CCD1D1;
     cursor: pointer;
 }
 
-.navbar-item-separate::after {
+.header-side .navbar-item-separate::after {
     content: "";
     display: block;
     position: absolute;
 }
-.navbar_list-icon {
+.header-side .navbar_list-icon {
     font-size: 15px;
 }
 
 /* Header Qr code*/
-.navbar-qr {
+.header-side .navbar-qr {
     background-color: var(--white-color);
     position: absolute;
     left: 0;
@@ -58,14 +59,14 @@ h1.navbar-logo {
     margin: 5px 0;
     animation: fadein ease-in 0.5s;
 } 
-.navbar-has-qr:hover .navbar-qr{
+.header-side .navbar-has-qr:hover .navbar-qr{
     display: block;
 }
-.navbar-has-notify:hover .navbar-notify {
+.header-side .navbar-has-notify:hover .navbar-notify {
     display: block;
 }
 
-.navbar-qr::before {
+.header-side .navbar-qr::before {
     position: absolute;
     width: 100%;
     height: 5px;
@@ -79,19 +80,19 @@ h1.navbar-logo {
         opacity: 1;
     }
 }
-.navbar-qr-img {
+.header-side .navbar-qr-img {
     border-top:3px solid rgb(90, 171, 221);
 }
-img.navbar-qr-img {
+.header-side img.navbar-qr-img {
     width: 160px;
 }
-img.download-img {
+.header-side img.download-img {
     width: 70px;
     margin: 0 3px;
 }
 
 /*Notification*/
-.navbar-notify {
+.header-side .navbar-notify {
     position: absolute;
     top: 100%;
     width: 400px;
@@ -115,66 +116,66 @@ img.download-img {
         transform: scale(1);
     }
 }
-.header-notify {
+.header-side .header-notify {
     width: 100%;
 }
-.header-notify h3 {
+.header-side .header-notify h3 {
     color: var(--blue-color);
     margin: 3px 12px;
     
 }
-.navbar-notify-list {
+.header-side .navbar-notify-list {
     list-style: none;
     padding-left: 0;
 }
-.navbar-notify-item {
+.header-side .navbar-notify-item {
     margin: 5px 0;   
 }
-.navbar-notify-item:hover {
+.header-side .navbar-notify-item:hover {
     background-color: var(--lightblue-color);
 }
-.navbar-notify-item-viewed {
+.header-side .navbar-notify-item-viewed {
     background-color: #FAE5D3;
 }
-.notify-link {
+.header-side .notify-link {
     display: flex;
     width: 100%;
     margin: 3px 13px;
     
 }
-.notify-img {
+.header-side .notify-img {
     color: none;
     margin: 0 10px;
 }
-img.notify-img {
+.header-side img.notify-img {
     margin: 0 8px 0 0;
     margin-top: 1px;
     width: 45px;
     height: 45px;
     overflow: hidden;
 }
-.notify-body {
+.header-side .notify-body {
     width: 100%;
 }
-.notify-name {
+.header-side .notify-name {
     display: block;
     font-weight: 400;
     top: 100%;
     font-size: 13px;
 }
-.notify-description{
+.header-side .notify-description{
     display: block;
     font-size: 10px;
     line-height: 10px;
     
 }
-.footer-notify {
+.header-side .footer-notify {
     display: flex;
 }
-.footer-notify:hover {
+.header-side .footer-notify:hover {
     background: var(--blue-color);
 }
-.footer-notify-btn {
+.header-side .footer-notify-btn {
     padding: 8px 30px;
     margin: auto;
     font-weight: 400;
@@ -182,26 +183,30 @@ img.notify-img {
 }
 
 /*Header Search*/
-.navbar-search {
+.header-side .navbar-search {
     display: flex;
     align-items: center;
     width: 100%;
+    height: 60px;
 }
-.navbar-logo {
+.header-side .navbar-logo {
     width: 180px;
     justify-content: center;
     margin: 0 4px;
     align-items: center;
     
 }
-h1.logo-title {
+.header-side h1.logo-title {
     color: var(--white-color);
+    margin: 0;
 }
-.search-product {
+.header-side .search-product {
     flex: 1;
     position: relative;
+    align-items: baseline;
+    display: flex;
 }
-.product-history {
+.header-side .product-history {
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
@@ -210,30 +215,30 @@ h1.logo-title {
     border-radius: 2px;
     border: 1px solid #D6EAF8;
     box-shadow: 0 1px 20px #D6EAF8;
-    margin: 0 15px;
+    margin: 0 33px;
     display: none;
     z-index: 100;
 }
-.form-control-p:focus ~ .product-history {
+.header-side .form-control-p:focus ~ .product-history {
     display: block;
 }
-.history-heading {
+.header-side .history-heading {
     margin: 8px 17px;
     font-weight: 300;
     font-size: 14px;
 }
-.history-list {
+.header-side .history-list {
     list-style: none;
     margin-top: 4px;
 }
-.history-item {
+.header-side .history-item {
     padding: 8px;
     height: 38px;
 }
-.history-item:hover {
+.header-side .history-item:hover {
     background-color: #EBEDEF;
 }
-a.history-link {
+.header-side a.history-link {
     color: #333;
     display: block;
 }
@@ -245,6 +250,7 @@ a.history-link {
     outline: none;
     padding: 0 10px;
     font-weight: 300; 
+    margin-left: 18px;
     
 }
 .btn-p {
@@ -261,26 +267,26 @@ a.history-link {
     background-color: #4380ED;
 }
 
-.cart-product {
+.header-side .cart-product {
     position: relative;
     margin: 0 10px;
 }
-.cart-product-icon {
+.header-side .cart-product-icon {
     color: var(--white-color);
     font-size: 20px;
 }
-.cart-product-icon:hover {
+.header-side .cart-product-icon:hover {
     color: #EBF5FB;
 }
-.product-list {
+.header-side .product-list {
     list-style: none;
     display: flex;
     margin: 0 4px;
 }
-.product-link {  
+.header-side .product-link {  
   margin: 0 0px 0 20px ;
 }
-.header-product-item a.product-link {
+.header-side .header-product-item a.product-link {
     color: var(--white-color)
 }
 

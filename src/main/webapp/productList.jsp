@@ -4,16 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<!-- CSS-->
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/swiper.min.css">
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
-<link rel="stylesheet" href="css/productListPage.css">
+	<!-- Global -->
+	<c:import url="sharedView\Global.html"/>
+
+	<!-- CSS-->
+<!-- 	<link rel="stylesheet" href="css/swiper.min.css"> -->
+	
+	<link rel="stylesheet" href="css/productListPage.css">
+	<title>Insert title here</title>
 </head>
 <body>
 	<c:import url="sharedView\header.jsp"></c:import>
