@@ -37,11 +37,11 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Resource:</h6>
-                <form action=employee.jsp method="get">
-                  	<a class="collapse-item" href=""> <input type="submit" name="command" value="Employee"  style="border: none; background: none; margin-left: -6px"/></a>
+                <form action="employee.jsp" method="get">
+                  	<a class="collapse-item"> <input type="submit" name="command" value="Employee"  style="border: none; background: none; margin-left: -6px"/></a>
                 </form>
-                <form action="ProductControllerServlet" method="get">
-                  	<a class="collapse-item" href=""> <input type="submit" name="command" value="Product"  style="border: none; background: none; margin-left: -6px"/></a>
+                <form action="../ProductControllerServlet" method="get">
+                  	<a class="collapse-item"> <input type="submit" name="command" value="Product"  style="border: none; background: none; margin-left: -6px"/></a>
                 </form>
             </div>
         </div>

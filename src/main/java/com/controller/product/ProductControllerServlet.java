@@ -11,12 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
-
 import com.data.ProductDAO;
 import com.model.Product;
 
-@WebServlet("admin/ProductControllerServlet")
-
+@WebServlet("/ProductControllerServlet")
 public class ProductControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ProductDAO productDAO;
@@ -30,7 +28,6 @@ public class ProductControllerServlet extends HttpServlet {
 		catch(Exception ex) {
 			throw new ServletException(ex);
 		}
-		
 	}
 	public ProductControllerServlet() {
         super();
@@ -91,16 +88,20 @@ public class ProductControllerServlet extends HttpServlet {
 		List<Product> product = productDAO.getProducts();
 		request.setAttribute("list_product", product);
 		String theCommand = request.getParameter("command");
+		
 		if(theCommand == null)
-			theCommand = "index.jsp";
+			theCommand = "LIST";
 		switch(theCommand) {
 			case "Product":
-				status = "admin/product.jsp";
+				status = "home-management-product.jsp";
+				break;
+			case "Employee":
+				status = "home-management-employee.jsp";
 				break;
 			default:
 				status = "home.jsp";
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("product.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./admin/product.jsp");
 		dispatcher.forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
