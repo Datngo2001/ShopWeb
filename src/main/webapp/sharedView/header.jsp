@@ -1,19 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./css/base.css">
-<link rel="stylesheet" href="./css/header.css">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-	    <header class="header">
+	<div class="header-side">
+	   <header class="header" id="header">
         <div class="grid">
-          <nav class="navbar">
+          <nav class="navbar-header">
             <ul class="navbar_list">
               <li class="navbar-item navbar-has-qr navbar-separate">
                 Wellcome to electronic store
@@ -110,27 +98,9 @@
             <div class="cart-product">
                 <i class="cart-product-icon fas fa-shopping-cart"></i>
             </div>
-            <form action="ProductControllerServlet" method="get">
-            <div class="product-header">
-              <ul class="product-list">
-                <li class="header-product-item">
-                  <a href="" class="product-link">
-                  	<input type="submit" name="command" value="Product">
-                  </a>
-                </li>
-                
-                <li class="header-product-item">
-                  <a href="" class="product-link">
-                  	<input type="submit" name="command" value="Employee">
-                  </a>
-                </li>
-              </ul>
-            </div>
-           	</form>
           </div>    
         </div>
 
       </header>
-	<script src="js/header.js"></script>
-</body>
-</html>
+	</div>
+<script src="js/header.js"></script>

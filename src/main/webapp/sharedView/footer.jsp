@@ -1,14 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="./css/footer.css">
 
-</head>
-<body>
 	<footer class="footer">
 		<div class="container-footer">
 			<div class="row-header">
@@ -49,5 +39,3 @@
 			</div>
 		</div>
 	</footer>
-</body>
-</html>

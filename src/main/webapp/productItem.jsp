@@ -5,15 +5,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Product name here</title>
-<link rel="stylesheet" href="./css/reset.css" />
-<link rel="stylesheet" href="./css/global.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="./css/productItem.css"/>
+	<!-- Global -->
+	<c:import url="sharedView\Global.html"/>
 
+	<!-- Local -->
+	<link rel="stylesheet" href="./css/productItem.css"/>
+	<title>Product name here</title>
 </head>
 <body>	
 	<c:import url="sharedView\header.jsp"></c:import>

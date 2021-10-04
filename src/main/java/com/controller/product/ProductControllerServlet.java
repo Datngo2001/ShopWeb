@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
-
 import com.data.ProductDAO;
 import com.model.Product;
 
@@ -29,7 +28,6 @@ public class ProductControllerServlet extends HttpServlet {
 		catch(Exception ex) {
 			throw new ServletException(ex);
 		}
-		
 	}
 	public ProductControllerServlet() {
         super();
@@ -103,7 +101,7 @@ public class ProductControllerServlet extends HttpServlet {
 			default:
 				status = "home.jsp";
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(status);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./admin/product.jsp");
 		dispatcher.forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
