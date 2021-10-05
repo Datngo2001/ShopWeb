@@ -103,4 +103,3 @@
 
       </header>
 	</div>
-<script src="js/header.js"></script>

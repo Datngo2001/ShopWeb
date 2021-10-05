@@ -6,14 +6,14 @@
 <html lang="en">
 <head>
 	<!-- Global -->
-	<c:import url="sharedView\Global.html"/>
+	<c:import url="sharedView/global.html"/>
 
 	<!-- Local -->
 	<link rel="stylesheet" href="./css/productItem.css"/>
 	<title>Product name here</title>
 </head>
 <body>	
-	<c:import url="sharedView\header.jsp"></c:import>
+	<c:import url="sharedView/header.jsp"></c:import>
 	<main class="productItemContainer">
 		<div class="sectionWrapper">
 			<section class="productItem">
@@ -243,7 +243,7 @@
 			</section>
 		</div>
 	</main>
-	<c:import url="sharedView\footer.jsp"></c:import>
+	<c:import url="sharedView/footer.jsp"></c:import>
 	<script src="./js/productItem.js"></script>
 </body>
 </html>

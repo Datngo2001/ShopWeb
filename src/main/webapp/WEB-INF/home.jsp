@@ -6,7 +6,7 @@
 <html>
 <head>
   <!-- Global -->
-  <c:import url="sharedView\Global.html"/>
+  <c:import url="sharedView/global.html"/>
   <!-- Carousel -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -15,7 +15,7 @@
 <title>Electronic Shop</title>
 </head>
 <body>
-	<c:import url="sharedView\header.jsp"></c:import>
+	<c:import url="sharedView/header.jsp"></c:import>
 	<div class="adver-demo">
       <div class="owl-carousel owl-theme">
         <div class="adver-item">
@@ -574,7 +574,7 @@
       </div>
     </div>
     <br> <br>
-	<c:import url="sharedView\footer.jsp"></c:import>
+	<c:import url="sharedView/footer.jsp"></c:import>
 	  <script>
 		   $(".carousel").owlCarousel({
 		     margin: 20,

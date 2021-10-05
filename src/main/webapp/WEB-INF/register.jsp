@@ -16,6 +16,7 @@
 	<div class="container d-flex justify-content-center align-content-center">
 		<form action="register" class="" method="POST">
 			<h2 class="">Signin</h2>
+			<input type="hidden" name="action" value="REGISTER"> 
 			<div class="mb-3">
 				<label for="usernameInput" class="form-label">Username</label> <input
 					id="usernameInput" type="text" class="form-control" name="username">

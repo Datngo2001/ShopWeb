@@ -5,16 +5,15 @@
 <html>
 <head>
 	<!-- Global -->
-	<c:import url="sharedView\Global.html"/>
+	<c:import url="sharedView/global.html"/>
 
 	<!-- CSS-->
-<!-- 	<link rel="stylesheet" href="css/swiper.min.css"> -->
-	
-	<link rel="stylesheet" href="css/productListPage.css">
+	<link rel="stylesheet" href="./css/swiper.min.css">
+	<link rel="stylesheet" href="./css/productListPage.css">
 	<title>Insert title here</title>
 </head>
 <body>
-	<c:import url="sharedView\header.jsp"></c:import>
+	<c:import url="sharedView/header.jsp"></c:import>
 	<div class="container">
 		<!-- ------sp 1---- -->
 		<div class="card">
@@ -187,6 +186,6 @@
 
 		</div>
 	</div>
-	<c:import url="sharedView\footer.jsp"></c:import>
+	<c:import url="sharedView/footer.jsp"></c:import>
 </body>
 </html>

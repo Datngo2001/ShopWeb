@@ -5,14 +5,14 @@
 <html lang="en">
 <head>
 	<!-- Global -->
-	<c:import url="sharedView\Global.html"/>
+	<c:import url="sharedView/global.html"/>
 	
 	<link rel="stylesheet" href="./css/payment.css"/>
 	<title>Your Cart</title>
 </head>
 
 <body>
-	<c:import url="sharedView\header.jsp"></c:import>
+	<c:import url="sharedView/header.jsp"></c:import>
 	<div class="title">
 		<h1 class="font-title">Shopping Cart</h1>
 	</div>
@@ -131,7 +131,7 @@
 		</div>
 
 	</div>
-	<c:import url="sharedView\footer.jsp"></c:import>
+	<c:import url="sharedView/footer.jsp"></c:import>
 </body>
 
 </html>
