@@ -7,6 +7,7 @@
 <head>
   <!-- Global -->
   <c:import url="sharedView/global.html"/>
+  <link rel="stylesheet" href="./css/bootstrap.css">
   <!-- Local -->
   <link rel="stylesheet" href="./css/profile.css">
 <title>Electronic Shop</title>

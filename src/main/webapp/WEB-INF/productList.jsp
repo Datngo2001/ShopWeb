@@ -6,6 +6,7 @@
 <head>
 	<!-- Global -->
 	<c:import url="sharedView/global.html"/>
+	<link rel="stylesheet" href="./css/bootstrap.css">
 
 	<!-- CSS-->
 	<link rel="stylesheet" href="./css/swiper.min.css">

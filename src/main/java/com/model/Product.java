@@ -5,8 +5,15 @@ public class Product {
 	public String name;
 	public String description;
 	public int price;
+	public double discount;
 	public int getId() {
 		return id;
+	}
+	public double getDiscount() {
+		return discount;
+	}
+	public void setDiscount(double discount) {
+		this.discount = discount;
 	}
 	public void setId(int id) {
 		this.id = id;
@@ -35,12 +42,13 @@ public class Product {
 		this.description = description;
 		this.price = price;
 	}
-	public Product(int id, String name, String description, int price) {
+	public Product(int id, String name, String description, int price, double discount) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
+		this.discount = discount;
 	}
 	
 }

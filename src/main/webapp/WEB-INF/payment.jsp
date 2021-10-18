@@ -6,7 +6,7 @@
 <head>
 	<!-- Global -->
 	<c:import url="sharedView/global.html"/>
-	
+		<link rel="stylesheet" href="./css/bootstrap.css">
 	<link rel="stylesheet" href="./css/payment.css"/>
 	<title>Your Cart</title>
 </head>

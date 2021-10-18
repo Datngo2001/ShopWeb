@@ -35,7 +35,8 @@ public class ProductDAO {
 				String name = myRes.getString("name");
 				String des = myRes.getString("description");
 				int price = myRes.getInt("price");
-				Product tempProduct = new Product(id, name, des, price);
+				double discount = price * 0.08;
+				Product tempProduct = new Product(id, name, des, price, discount);
 				products.add(tempProduct);
 			}
 			return products;
@@ -81,6 +82,7 @@ public class ProductDAO {
 				String name = myRes.getString("name");
 				String des = myRes.getString("description");
 				int price = myRes.getInt("price");
+				//double discount = price * 0.08;
 				theProduct = new Product(name, des, price); 
 			}
 			else {
