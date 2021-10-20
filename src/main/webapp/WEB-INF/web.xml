@@ -9,4 +9,5 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+<!--   To do: sesstion config to set session tracking -->
 </web-app>
