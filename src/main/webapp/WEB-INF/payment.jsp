@@ -4,11 +4,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Global -->
 <c:import url="sharedView/global.html" />
 
 <link rel="stylesheet" href="./css/payment.css" />
 <title>Your Cart</title>
+
 </head>
 
 <body>
@@ -66,7 +68,7 @@
 				</div>
 			</div>
 		</div>
-
+	</div>
   <div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>

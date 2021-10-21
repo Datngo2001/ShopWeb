@@ -7,6 +7,7 @@
 <head>
 	<!-- Global -->
 	<c:import url="sharedView/global.html"/>
+	<link rel="stylesheet" href="./css/bootstrap.css">
 
 	<!-- Local -->
 	<link rel="stylesheet" href="./css/productItem.css"/>
@@ -23,10 +24,10 @@
 					temporibus molestiae adipisci repudiandae veritatis quibusdam
 					autem. Ratione quaerat eius repellendus?</h1>
 				<img src="./assets/img/gpu.jpg" alt="Gpu" class="productItemImage" /> <span
-					class="productItemPrice">1,890,000</span>
+					class="productItemPrice">${theProduct.price} ${theProduct.description}</span>
 			</section>
 			<section class="itemInfo productItem">
-				<h1 class="productItemHeader">Product Information</h1>
+				<h1 class="productItemHeader"></h1>
 				<ul class="productInfoList">
 					<li class="productInfoItem">Lorem ipsum dolor sit amet
 						consectetur, adipisicing elit. Numquam accusamus vero quod vel

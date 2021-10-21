@@ -4,16 +4,16 @@
           <nav class="navbar-header">
             <ul class="navbar_list">
               <li class="navbar-item navbar-has-qr navbar-separate">
-                Wellcome to electronic store
+                Wellcome to book store
                 <!--Header QR-->
                 <div class="navbar-qr">
-                    <img src="./assets/img/QrCode.png" alt="" class="navbar-qr-img">
+                    <img src="" alt="" class="navbar-qr-img">
                     <div class="navbar-qr-apps">
                       <a href="" class="navbar_qr-link">
-                        <img src="./assets/img/CHplay.png" alt="google play" class="download-img">
+                        <img src="" alt="google play" class="download-img">
                       </a>
                       <a href="" class="navbar_qr-link">
-                        <img src="./assets/img/Phone.png" alt="google play" class="download-img">
+                        <img src="" alt="google play" class="download-img">
                       </a>
                     </div>
                 </div>
@@ -77,28 +77,39 @@
             </ul>
           </nav>
           <div class="navbar-search">
-            <div class="navbar-logo">
-              <h1 class="logo-title"> <span>LOGO</span></h1>
-            </div>
-            <div class="search-product">
-              <input class="form-control-p" type="text" placeholder="Searching anything here...">
-              <button class="btn-p btn-primary" > <i class="fas fa-search"></i> </button>
-              <div class="product-history">
-                <h4 class="history-heading">History Search</h4>
-                <ul class="history-list">
-                  <li class="history-item">
-                    <a href="" class="history-link">Iphone 13</a>
-                  </li>
-                  <li class="history-item">
-                    <a href="" class="history-link">Acer Gaming</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="cart-product">
-                <i class="cart-product-icon fas fa-shopping-cart"></i>
-            </div>
-          </div>    
+          	<div class="navbar-logo">
+	            <h1 class="logo-title"> <span class="logo-header">E-BOOK</span></h1>
+	        </div>
+			<div class="grid_column-8 search-left">
+
+	            <div class="search-product">
+	              <input class="form-control-p" type="text" placeholder="Search by title, authur, series or release">
+	              <button class="btn-p btn-black" > <i class="fas fa-search"></i> </button>
+	              <div class="product-history">
+	                <h4 class="history-heading">History Search</h4>
+	                <ul class="history-list">
+	                  <li class="history-item">
+	                    <a href="" class="history-link">Iphone 13</a>
+	                  </li>
+	                  <li class="history-item">
+	                    <a href="" class="history-link">Acer Gaming</a>
+	                  </li>
+	                </ul>
+	              </div>
+	            </div>
+			</div>
+			<div class="grid_column-4 search-right">
+				<a href="#" class="wishlist-link">
+		          	<div class="wishlist-product"></div>
+		           	<span class="wishlist-title"> Wishlist</span>
+	            </a>
+				<a href="" class="cart-link">
+					<div class="cart-product"></div>
+					<span class="cart-title"> Cart</span>
+				</a>
+			</div>
+          </div>
+              
         </div>
 
       </header>
